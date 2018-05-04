@@ -14,10 +14,11 @@ var app = express();
 // view engine setup
 app.set("view engine", "jade");
 
-app.use(logger("dev"));
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, '../frontend/build'))); //build is the production mode; not on computer anymore; it is hidden in heroku
 
 app.use(
     session({
@@ -32,6 +33,11 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/users", users);
+
+//place this after backend routing
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
