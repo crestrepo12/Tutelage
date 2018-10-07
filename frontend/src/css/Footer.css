@@ -1,60 +1,31 @@
-.footerSection {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 90px; 
-    font-size: 16px;
-    border-top-color: #e1e4e8;
-    border-top-style: solid;
-    border-top-width: 1px;
-
-    /* background: #E8F1F2; */
-    /* background: -webkit-linear-gradient(#E0583A, #353535);
-    background:    -moz-linear-gradient(#E0583A, #353535);
-    background:         linear-gradient(#E0583A, #353535); */
-    /* background: linear-gradient( #E0583A, #ff9000); */
-    color: black;
-    text-align: center;
+footer {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 50px;
 }
 
-.hqSection {
-    text-align: left;
-    margin-left: 60px;
-    font-weight: bold;
-    /* border: solid; */
+footer hr {
+  width: 95%;
 }
 
-.linkSection {
-    text-align: right;
-    margin-right: 50%;
-    /* border: solid; */
-}
-
-#copyright {
-    font-weight: bold;
-    text-align: left;
-    margin-left: 60px;
-    margin-top: 30px;
-    /* border: solid; */
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
 }
 
 #tagline {
-    color: #f46524ff;
-    text-align: right;
-    margin: auto;
-    text-align: center;
-    /* border: solid; */
-}
-
-#rights {
-    text-align: left;
-    margin-left: 60px;
-    font-weight: bold;
-    /* border: solid; */
+  color: #f46524ff;
+  margin: 0;
 }
 
 #githubLogo {
-    width: 42px;
-    height: 42px;
+  width: 42px;
+  height: 42px;
+  color: white;
+  padding-bottom: 1rem;
+  margin: auto 0;
 }
