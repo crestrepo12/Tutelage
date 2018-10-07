@@ -132,107 +132,103 @@ class RegisterUser extends Component {
     const { handleInputChange, handleRadioChange, registerNewUserForm } = this;
 
     return (
-      <div id="confetti-container">
-        {showConfetti ? (
-          <div id="confetti">
-            <Confetti {...this.size} />
-          </div>
-        ) : (
-          ""
-        )}
-        <div id="registerForm">
-          <fieldset id="register-container">
-            <legend id="register-title">Register New User:</legend>
-            <form onSubmit={registerNewUserForm} id="input-container">
-              <div className="radio-button">
-                Are you a:
-                <input
-                  type="radio"
-                  name="ismentor"
-                  value="true"
-                  onChange={handleRadioChange}
-                />
-                Mentor
-                <input
-                  type="radio"
-                  name="ismentor"
-                  value="false"
-                  onChange={handleRadioChange}
-                />
-                Mentee
-              </div>
-              <input
-                className="input-box text-indent"
-                type="text"
-                placeholder="First Name"
-                name="firstname"
-                value={firstname}
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                className="input-box text-indent"
-                type="text"
-                placeholder="Last Name"
-                name="lastname"
-                value={lastname}
-                onChange={handleInputChange}
-                required
-              />{" "}
-              <input
-                className="input-box text-indent"
-                type="email"
-                placeholder="Email"
-                name="email"
-                value={email}
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                className="input-box text-indent"
-                type="text"
-                placeholder="Username"
-                name="username"
-                value={username}
-                onChange={handleInputChange}
-                minLength="6"
-                maxLength="12"
-                required
-              />
-              <input
-                className="input-box text-indent"
-                type="password"
-                placeholder="Password"
-                name="password"
-                value={password}
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                className="input-box text-indent"
-                type="password"
-                placeholder="Confirm Password"
-                name="passwordConfirmation"
-                value={passwordConfirmation}
-                onChange={handleInputChange}
-                required
-              />
-              <div className="register-message">{message}</div>
-              <input
-                className="input-box createAccountButton"
-                type="submit"
-                value="Create Account"
-              />
-            </form>
-          </fieldset>
+      <div id="register-container">
+        <div id="register-form">
+          <h1 id="register-title"> Create an account </h1>
 
-          <div id="is-member-link">
-            <p>
-              Already a Member? <Link to="/login"> Log in Here </Link>
-            </p>
-          </div>
+          <form onSubmit={registerNewUserForm}>
+            <div className="radio-button font-size">
+              Are you a:
+              <input
+                type="radio"
+                name="ismentor"
+                value="true"
+                onChange={handleRadioChange}
+              />
+              Mentor
+              <input
+                type="radio"
+                name="ismentor"
+                value="false"
+                onChange={handleRadioChange}
+              />
+              Mentee
+            </div>
+            <label htmlFor="firstname" className="font-size"> First Name </label>
+            <input
+              className="text-indent"
+              type="text"
+              name="firstname"
+              value={firstname}
+              onChange={handleInputChange}
+              required
+            />
+
+            <label htmlFor="lastname" className="font-size"> Last Name </label>
+            <input
+              className="text-indent"
+              type="text"
+              name="lastname"
+              value={lastname}
+              onChange={handleInputChange}
+              required
+            />{" "}
+
+            <label htmlFor="email" className="font-size"> Email </label>
+            <input
+              className="text-indent"
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleInputChange}
+              required
+            />
+
+            <label htmlFor="username" className="font-size"> Username </label>
+            <input
+              className="text-indent"
+              type="text"
+              name="username"
+              value={username}
+              onChange={handleInputChange}
+              minLength="6"
+              maxLength="12"
+              required
+            />
+
+            <label htmlFor="password" className="font-size"> Password </label>
+            <input
+              className="text-indent"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleInputChange}
+              required
+            />
+
+            <label htmlFor="passwordConfirmation" className="font-size"> Confirm Password </label>
+            <input
+              className="text-indent"
+              type="password"
+              name="passwordConfirmation"
+              value={passwordConfirmation}
+              onChange={handleInputChange}
+              required
+            />
+            
+            <input
+              className="button button-size"
+              type="submit"
+              value="Create Account"
+            />
+          </form>
+
+          <div className="register-message">{message}</div>
+
+          <p>
+            Already a Member? <Link to="/login"> Log in Here </Link>
+          </p>
         </div>
-
         <Footer />
       </div>
     );
