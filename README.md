@@ -24,7 +24,7 @@ Tutelage works by allowing a "mentor" and a "mentee" to sign up for their accoun
 ## How to run "Tutelage" locally:
 
 
-##Technologies
+## Technologies
 
 Backend
 
