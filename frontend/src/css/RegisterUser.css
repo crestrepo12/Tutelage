@@ -60,3 +60,27 @@ h1#register-title {
     height: 100%;
     z-index: -1;
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #register-form {
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        padding: 10px 30px 30px 30px;
+        box-shadow: unset;
+        border: 1px solid rgb(100, 100, 100, 0.25);
+        border-radius: 20px;
+        height: unset;
+    }
+
+    #register-form form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+}
