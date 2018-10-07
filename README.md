@@ -14,19 +14,19 @@ Tutelage works by allowing a "mentor" and a "mentee" to sign up for their accoun
 ![The Landing Page](./frontend/public/images/HomePage.png)
 ##### fig 1. The Landing Page.
 
-
+---
 ![Register Page](./frontend/public/images/RegisterPage.png)
 ##### fig 2. Register Page.
 
-
+---
 ![Login Page](./frontend/public/images/LoginPage.png)
 ##### fig 3. Login Page.
 
-
+---
 ![Profile](./frontend/public/images/ProfilePage.png)
 ##### fig 4. Profile.
 
-
+---
 ![Searching for mentors](./frontend/public/images/MentorPage.png)
 ##### fig 5. Search for mentors.
 
