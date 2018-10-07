@@ -1,5 +1,5 @@
 .login-form-container {
-    height: 100%;
+    height: 100vh;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,6 @@
 #login-form {
     width: 300px;
     margin: auto;
-    margin-top: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;

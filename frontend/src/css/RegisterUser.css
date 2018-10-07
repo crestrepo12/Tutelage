@@ -1,7 +1,6 @@
 #registerForm {
     width: 300px;
     margin: auto;
-    margin-top: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
