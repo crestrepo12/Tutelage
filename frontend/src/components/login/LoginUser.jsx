@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link, Switch, Redirect } from "react-router-dom";
 import axios from "axios";
-import Footer from '../Footer';
+import Footer from "../Footer";
 import "../../css/LoginUser.css";
 
 class LoginUser extends Component {
@@ -54,52 +54,72 @@ class LoginUser extends Component {
 
   render() {
     // const { username, password, message, signedIn } = this.state;
-    const { handleInputChange, submitLoginForm, username, password, message, signedIn, user } = this.props;
-    console.log("USERRR PLEEEASE:", user)
-    console.log("USERNAME? PLLLEEEASE:", user.username)
-    
+    const {
+      handleInputChange,
+      submitLoginForm,
+      username,
+      password,
+      message,
+      signedIn,
+      user
+    } = this.props;
+    console.log("USERRR PLEEEASE:", user);
+    console.log("USERNAME? PLLLEEEASE:", user.username);
+
     if (signedIn) {
-      return( <Redirect to= {`/users/${user.username}`}/>)
+      return <Redirect to={`/users/${user.username}`} />;
     }
 
     // can add a cookie/session storage so user doesn't see login page when they are signed in
 
     return (
       <div className="login-form-container">
-      <div id="login-form">
-        <legend id="login-title"> Welcome Back! </legend>
+        <div id="login-form">
+          <h1 id="login-title">
+            {" "}
+            Welcome Back!{" "}
+          </h1>
 
-          <input
-            name="username"
-            type="text"
-            value={username}
-            onChange={handleInputChange}
-            placeholder="Username"
-            className="input-box text-indent"
-          />
-          <input
-            name="password"
-            type="password"
-            value={password}
-            onChange={handleInputChange}
-            placeholder="Password"
-            className="input-box text-indent"
-          />
-  
-          <button className="loginButton input-box" onClick={submitLoginForm} > Log in </button>
+          <form>
+            <label htmlFor="username" className="font-size">
+              {" "}
+              Username{" "}
+            </label>
+            <input
+              name="username"
+              type="text"
+              value={username}
+              onChange={handleInputChange}
+              className="text-indent"
+            />
+
+            <label htmlFor="password" className="font-size">
+              {" "}
+              Password{" "}
+            </label>
+            <input
+              name="password"
+              type="password"
+              value={password}
+              onChange={handleInputChange}
+              className="text-indent"
+            />
+
+            <button className="button button-size" onClick={submitLoginForm}>
+              {" "}
+              Log in{" "}
+            </button>
+          </form>
 
           <p className="message">{message}</p>
 
           <p>
             Not a member? <Link to="/register"> Register here. </Link>
           </p>
+        </div>
 
-          </div>
-
-        
         <Footer />
       </div>
-
     );
   }
 }

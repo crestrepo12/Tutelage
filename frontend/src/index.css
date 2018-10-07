@@ -11,6 +11,10 @@ body {
   font-family: 'IBM Plex Serif', serif;
 }
 
+p {
+  font-size: 1.4rem;
+}
+
 body h1,
 body h2,
 body h3,
