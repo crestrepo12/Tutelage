@@ -29,3 +29,17 @@ footer ul {
   padding-bottom: 1rem;
   margin: auto 0;
 }
+
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    footer ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+    }
+}
