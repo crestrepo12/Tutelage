@@ -1,6 +1,6 @@
 ## Tutelage
 
-<img src="./frontend/public/images/TutelageLogo.png" height="400">
+![Tutelage Logo](./frontend/public/images/TutelageLogo.png)
 
 ## Description
 
