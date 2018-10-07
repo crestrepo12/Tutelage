@@ -25,6 +25,57 @@ a.app-name {
     color: #f46524ff !important;
 }
 
+.font-size {
+    font-size: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 15px;
+    width: 230px;
+    height: 33px;
+    border-radius: 3px;
+    font-size: 1.5rem;
+}
+
+/* Overall theme button */
+.button {
+    width: 200px;
+    background-color: #f46524ff;
+    border-radius: 15px;
+    color: white;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #f46524ff;
+    display: flex;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: rgb(53, 53, 53);
+    border: 2px solid #f46524ff;
+}
+
+.button-size {
+    width: 230px;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
 @media only screen and (max-width: 767px) {
     body {
         width: 100%;
